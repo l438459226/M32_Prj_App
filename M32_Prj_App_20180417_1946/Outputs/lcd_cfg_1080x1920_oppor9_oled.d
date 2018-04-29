@@ -1,0 +1,15 @@
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: Src\LCD\lcd_cfg_1080x1920_OppoR9_Oled.c
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\pport_spi.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\BasicDataType.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\user_gpio_def.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\stm32f10x_conf.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\lcd_cfg.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\user_config.h
+.\outputs\lcd_cfg_1080x1920_oppor9_oled.o: .\Src\GPU_Cfg.h

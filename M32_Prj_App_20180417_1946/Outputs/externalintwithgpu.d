@@ -1,0 +1,12 @@
+.\outputs\externalintwithgpu.o: Src\ExternalIntWithGPU.c
+.\outputs\externalintwithgpu.o: Src\ExternalIntWithGPU.h
+.\outputs\externalintwithgpu.o: Src\BasicDataType.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_exti.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\externalintwithgpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\externalintwithgpu.o: .\Src\stm32f10x_conf.h
+.\outputs\externalintwithgpu.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_gpio.h

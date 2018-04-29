@@ -1,0 +1,14 @@
+.\Outputs\fat32sys_forfastfiforead.o: Src\FileSys\Fat32Sys_ForFastFIFORead.c
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\BasicDataType.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\GPU_Cfg.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\user_config.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\Outputs\fat32sys_forfastfiforead.o: D:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\stm32f10x_conf.h
+.\Outputs\fat32sys_forfastfiforead.o: D:\ARM\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\MCU_GPU_fsmc.h
+.\Outputs\fat32sys_forfastfiforead.o: .\Src\tools.h

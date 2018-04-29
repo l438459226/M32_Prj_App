@@ -1,0 +1,11 @@
+.\outputs\mcu_gpu_fsmc.o: Src\MCU_GPU_fsmc.c
+.\outputs\mcu_gpu_fsmc.o: Src\MCU_GPU_fsmc.h
+.\outputs\mcu_gpu_fsmc.o: Src\BasicDataType.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_fsmc.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\mcu_gpu_fsmc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\mcu_gpu_fsmc.o: .\Src\stm32f10x_conf.h

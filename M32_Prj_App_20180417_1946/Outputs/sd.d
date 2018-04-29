@@ -1,0 +1,14 @@
+.\outputs\sd.o: Src\sd.c
+.\outputs\sd.o: Src\BasicDataType.h
+.\outputs\sd.o: Src\GPU_Cfg.h
+.\outputs\sd.o: Src\user_config.h
+.\outputs\sd.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\sd.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\sd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\sd.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\sd.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\sd.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\sd.o: .\Src\stm32f10x_conf.h
+.\outputs\sd.o: Src\MCU_GPU_fsmc.h
+.\outputs\sd.o: Src\tools.h
+.\outputs\sd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -1,0 +1,4 @@
+-c --cpu Cortex-M3 -g -O3 --apcs=interwork --split_sections -I.\Src\STM32F1xx_Std_Driver\Include -I.\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc -I.\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include -I.\Src -I.\Src\LCD240X320 -I.\Src\power 
+-I D:\ARM\Keil\ARM\RV31\INC 
+-I D:\ARM\Keil\ARM\CMSIS\Include 
+-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="16000000L" -o ".\Outputs\app.o" --omf_browse ".\Outputs\app.crf" --depend ".\Outputs\app.d" "Src\app.c"

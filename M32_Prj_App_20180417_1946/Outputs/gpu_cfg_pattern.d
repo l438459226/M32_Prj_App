@@ -1,0 +1,14 @@
+.\outputs\gpu_cfg_pattern.o: Src\GPU_Cfg_Pattern.c
+.\outputs\gpu_cfg_pattern.o: Src\GPU_Cfg.h
+.\outputs\gpu_cfg_pattern.o: Src\BasicDataType.h
+.\outputs\gpu_cfg_pattern.o: Src\user_config.h
+.\outputs\gpu_cfg_pattern.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\gpu_cfg_pattern.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\gpu_cfg_pattern.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\gpu_cfg_pattern.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\gpu_cfg_pattern.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\gpu_cfg_pattern.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\gpu_cfg_pattern.o: .\Src\stm32f10x_conf.h
+.\outputs\gpu_cfg_pattern.o: Src\MCU_GPU_fsmc.h
+.\outputs\gpu_cfg_pattern.o: Src\tools.h
+.\outputs\gpu_cfg_pattern.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

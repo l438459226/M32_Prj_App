@@ -1,0 +1,15 @@
+.\outputs\pport_spi.o: Src\pport_spi.c
+.\outputs\pport_spi.o: Src\pport_spi.h
+.\outputs\pport_spi.o: Src\BasicDataType.h
+.\outputs\pport_spi.o: Src\user_gpio_def.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\pport_spi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\pport_spi.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\pport_spi.o: .\Src\stm32f10x_conf.h
+.\outputs\pport_spi.o: Src\tools.h
+.\outputs\pport_spi.o: Src\user_config.h
+.\outputs\pport_spi.o: Src\GPU_Cfg.h

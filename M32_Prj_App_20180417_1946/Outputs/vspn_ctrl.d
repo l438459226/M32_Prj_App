@@ -1,0 +1,11 @@
+.\outputs\vspn_ctrl.o: Src\power\vspn_ctrl.c
+.\outputs\vspn_ctrl.o: Src\power\vspn_ctrl.h
+.\outputs\vspn_ctrl.o: Src\power\i2c.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\vspn_ctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\vspn_ctrl.o: .\Src\stm32f10x_conf.h
+.\outputs\vspn_ctrl.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_gpio.h

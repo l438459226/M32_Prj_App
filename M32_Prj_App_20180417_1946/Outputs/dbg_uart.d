@@ -1,0 +1,13 @@
+.\outputs\dbg_uart.o: Src\DBG_uart.c
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_usart.h
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\outputs\dbg_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\outputs\dbg_uart.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\outputs\dbg_uart.o: .\Src\stm32f10x_conf.h
+.\outputs\dbg_uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\outputs\dbg_uart.o: Src\DBG_uart.h
+.\outputs\dbg_uart.o: Src\BasicDataType.h
+.\outputs\dbg_uart.o: Src\GPU_SPI_Flash_protocol.h

@@ -1,0 +1,367 @@
+---- Initial_LCM_1080x1920_TianJi2 Matches (12 in 4 files) ----
+Lcd_cfg.h (src):void Initial_LCM_1080x1920_TianJi2(void);
+lcd_cfg_1080x1920_TianJi2.c (src\lcd):void Initial_LCM_1080x1920_TianJi2(void) {
+M32_Control.htm (outputs): <LI><a href="#[4d]">Initial_LCM_1080x1920_TianJi2</a> from lcd_cfg_1080x1920_tianji2.o(i.Initial_LCM_1080x1920_TianJi2) referenced from user_config.o(.constdata)
+M32_Control.htm (outputs):<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+M32_Control.htm (outputs):<P><STRONG><a name="[4d]"></a>Initial_LCM_1080x1920_TianJi2</STRONG> (Thumb, 334 bytes, Stack size 8 bytes, lcd_cfg_1080x1920_tianji2.o(i.Initial_LCM_1080x1920_TianJi2))
+M32_Control.htm (outputs):<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Initial_LCM_1080x1920_TianJi2 &rArr; LoadLcdParameterConfig &rArr; SPI_2828_WrReg &rArr; SPI_3W_SET_PAs
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+M32_Control.htm (outputs):<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Initial_LCM_1080x1920_TianJi2
+User_config.c (src):	Initial_LCM_1080x1920_TianJi2
+---- PARA_MIPI_TIANJI2_1080x1920_A Matches (2 in 1 files) ----
+User_config.c (src):const pMIPI_Para_Table PARA_MIPI_TIANJI2_1080x1920_A = {
+User_config.c (src):	&PARA_MIPI_TIANJI2_1080x1920_A
+---- ptr_MIPI_TABLE Matches (110 in 8 files) ----
+GPU_Cfg.c (src):	DE_VS_HS_POLARITY = (((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_DE) << 15) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_VS) << 14) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_HS) << 13));
+GPU_Cfg.c (src):	DUALMIPI_CHANNEL_CFG = (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD) << 15) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_CHANNEL_SWAP) << 14) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->ODD_EVEN_nLEFT_RIGHT) << 13);
+GPU_Cfg.c (src):	GPU_set_PLL_factor(gPLL_FACTOR_Table[ptr_MIPI_TABLE[gMipiTableIndex]->PCLK_Freq]);
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH & 0x1FFF) | DUALMIPI_CHANNEL_CFG; //{ChannelTwoSame, ChannelSwap, DualMipi_EO_nLR, VSW[12:0]}
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH & 0x1FFF) | DE_VS_HS_POLARITY; //DE_INV=0; VS_INV=1; HS_INV=1;
+GPU_Cfg.c (src):	value = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH & 0x1FFF;
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is only half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>1); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2)*3); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	for(i=1; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 3; //divide 8
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 2) : (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 3);
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j++) {
+GPU_Cfg_Pattern.c (src):	for(j=((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		for(j=(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j<(((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	CheckerVStep = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) / ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):	CheckerVRemainder = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) % ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	pattern_WriteLineOneDot(ddr_current_display_region_addr, (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1), blk_num_in256Pixel_of_each_line);
+GPU_Cfg_Pattern.c (src):		for(j=1; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+lcd_cfg_1080x1920_OppoR9_Oled.c (src\lcd):	TmpData = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH * 3; //PST(Packet Size Threshold), must be in multiple of 3 bytes, and less than 4096Bytes
+Main.c (src):		ShowMode = ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE; //显示的总画面个数
+Main.c (src):	if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Main.c (src):	LCD_ShowString(0,4,"LCM Name:",POINT_COLOR);LCD_ShowString(0,5,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bLCDName,GREEN);
+Main.c (src):	LCD_ShowString(0,8,"IC  Name:",POINT_COLOR);LCD_ShowString(10,8,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bICName,GREEN);
+Main.c (src):			if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Power_task.c (src):	VSPN_SetVSNVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSP_mV);
+Power_task.c (src):	VSPN_SetVSPVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSN_mV);	
+Power_task.c (src):  ptr_MIPI_TABLE[gMipiTableIndex]->ptr_Initial_LCM(); //写可以用或, 读得一个一个来	
+Pport_spi.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):				SPI_2828_WrReg(0xB1, ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HSA/VSA
+Pport_spi.c (src):			SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH); 	  //H V  //HBP/VBP   //
+Pport_spi.c (src):		}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		 SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HBP/VBP   //07  0B 用此
+Pport_spi.c (src):	//SPI_2828_WrReg(0xB2, (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH), (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH)); 	  //H V  //HBP/VBP  //03用此
+Pport_spi.c (src):    SPI_2828_WrReg(0xB3, ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH);  	  //H V  //HFP/VFP
+Pport_spi.c (src):    SPI_2828_WrReg(0xB4, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH>>8))); //800	H
+Pport_spi.c (src):    SPI_2828_WrReg(0xB5, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>8))); //2560 V
+Pport_spi.c (src):		mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+Pport_spi.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH & 0x00FF);
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH & 0x00FF);
+Pport_spi.c (src):	}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+Pport_spi.c (src):		TmpDat |= (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH<<8)+(ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH<<8);
+Pport_spi.c (src):	TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH & 0x00FF);
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH;
+Pport_spi.c (src):	mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+User_config.c (src):const pMIPI_Para_Table *ptr_MIPI_TABLE[] = {
+User_config.c (src):unsigned char MIPI_TABLE_LAST_INDEX = ((sizeof(ptr_MIPI_TABLE)/sizeof(const pMIPI_Para_Table *)) - 1); //自动计算ptr_EDP_TABLE表中对应屏参配置的个数
+User_config.h (src):extern const pMIPI_Para_Table *ptr_MIPI_TABLE[];
+---- ptr_MIPI_TABLE Matches (110 in 8 files) ----
+GPU_Cfg.c (src):	DE_VS_HS_POLARITY = (((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_DE) << 15) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_VS) << 14) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_HS) << 13));
+GPU_Cfg.c (src):	DUALMIPI_CHANNEL_CFG = (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD) << 15) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_CHANNEL_SWAP) << 14) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->ODD_EVEN_nLEFT_RIGHT) << 13);
+GPU_Cfg.c (src):	GPU_set_PLL_factor(gPLL_FACTOR_Table[ptr_MIPI_TABLE[gMipiTableIndex]->PCLK_Freq]);
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH & 0x1FFF) | DUALMIPI_CHANNEL_CFG; //{ChannelTwoSame, ChannelSwap, DualMipi_EO_nLR, VSW[12:0]}
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH & 0x1FFF) | DE_VS_HS_POLARITY; //DE_INV=0; VS_INV=1; HS_INV=1;
+GPU_Cfg.c (src):	value = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH & 0x1FFF;
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is only half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>1); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2)*3); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	for(i=1; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 3; //divide 8
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 2) : (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 3);
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j++) {
+GPU_Cfg_Pattern.c (src):	for(j=((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		for(j=(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j<(((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	CheckerVStep = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) / ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):	CheckerVRemainder = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) % ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	pattern_WriteLineOneDot(ddr_current_display_region_addr, (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1), blk_num_in256Pixel_of_each_line);
+GPU_Cfg_Pattern.c (src):		for(j=1; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+lcd_cfg_1080x1920_OppoR9_Oled.c (src\lcd):	TmpData = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH * 3; //PST(Packet Size Threshold), must be in multiple of 3 bytes, and less than 4096Bytes
+Main.c (src):		ShowMode = ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE; //显示的总画面个数
+Main.c (src):	if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Main.c (src):	LCD_ShowString(0,4,"LCM Name:",POINT_COLOR);LCD_ShowString(0,5,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bLCDName,GREEN);
+Main.c (src):	LCD_ShowString(0,8,"IC  Name:",POINT_COLOR);LCD_ShowString(10,8,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bICName,GREEN);
+Main.c (src):			if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Power_task.c (src):	VSPN_SetVSNVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSP_mV);
+Power_task.c (src):	VSPN_SetVSPVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSN_mV);	
+Power_task.c (src):  ptr_MIPI_TABLE[gMipiTableIndex]->ptr_Initial_LCM(); //写可以用或, 读得一个一个来	
+Pport_spi.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):				SPI_2828_WrReg(0xB1, ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HSA/VSA
+Pport_spi.c (src):			SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH); 	  //H V  //HBP/VBP   //
+Pport_spi.c (src):		}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		 SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HBP/VBP   //07  0B 用此
+Pport_spi.c (src):	//SPI_2828_WrReg(0xB2, (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH), (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH)); 	  //H V  //HBP/VBP  //03用此
+Pport_spi.c (src):    SPI_2828_WrReg(0xB3, ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH);  	  //H V  //HFP/VFP
+Pport_spi.c (src):    SPI_2828_WrReg(0xB4, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH>>8))); //800	H
+Pport_spi.c (src):    SPI_2828_WrReg(0xB5, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>8))); //2560 V
+Pport_spi.c (src):		mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+Pport_spi.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH & 0x00FF);
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH & 0x00FF);
+Pport_spi.c (src):	}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+Pport_spi.c (src):		TmpDat |= (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH<<8)+(ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH<<8);
+Pport_spi.c (src):	TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH & 0x00FF);
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH;
+Pport_spi.c (src):	mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+User_config.c (src):const pMIPI_Para_Table *ptr_MIPI_TABLE[] = {
+User_config.c (src):unsigned char MIPI_TABLE_LAST_INDEX = ((sizeof(ptr_MIPI_TABLE)/sizeof(const pMIPI_Para_Table *)) - 1); //自动计算ptr_EDP_TABLE表中对应屏参配置的个数
+User_config.h (src):extern const pMIPI_Para_Table *ptr_MIPI_TABLE[];
+---- gMipiTableIndex Matches (130 in 7 files) ----
+GPU_Cfg.c (src):	DE_VS_HS_POLARITY = (((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_DE) << 15) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_VS) << 14) | ((UINT16)(!ptr_MIPI_TABLE[gMipiTableIndex]->V_HS) << 13));
+GPU_Cfg.c (src):	DUALMIPI_CHANNEL_CFG = (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD) << 15) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_CHANNEL_SWAP) << 14) | (((UINT16)ptr_MIPI_TABLE[gMipiTableIndex]->ODD_EVEN_nLEFT_RIGHT) << 13);
+GPU_Cfg.c (src):	GPU_set_PLL_factor(gPLL_FACTOR_Table[ptr_MIPI_TABLE[gMipiTableIndex]->PCLK_Freq]);
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH & 0x1FFF) | DUALMIPI_CHANNEL_CFG; //{ChannelTwoSame, ChannelSwap, DualMipi_EO_nLR, VSW[12:0]}
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+GPU_Cfg.c (src):	MCU_GPU__DATA = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH & 0x1FFF) | DE_VS_HS_POLARITY; //DE_INV=0; VS_INV=1; HS_INV=1;
+GPU_Cfg.c (src):	value = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH & 0x1FFF;
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is only half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi
+GPU_Cfg_Pattern.c (src):		Scale256Step = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH << 1) % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):		Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>1); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>2)*3); j++) {
+GPU_Cfg_Pattern.c (src):		for(; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	Scale256Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH / (((UINT16)grayscale_num) + 1); //divide 256
+GPU_Cfg_Pattern.c (src):	Scale256Remainder = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH % (((UINT16)grayscale_num) + 1); //remainder
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	for(i=1; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i+=2) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	for(i=0; i<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; i++) {
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 3; //divide 8
+GPU_Cfg_Pattern.c (src):	while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	ColorBar8Step = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 2) : (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH >> 3);
+GPU_Cfg_Pattern.c (src):		for(j=0; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	for(j=0; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j++) {
+GPU_Cfg_Pattern.c (src):	for(j=((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3; j<ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH; j++) {
+GPU_Cfg_Pattern.c (src):		for(j=(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2); j<(((ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH >> 2)) * 3); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):		if((*ptr_i) == ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH) //when dual-mipi, break if half filled
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1; //dual mipi will be processed in pattern_WriteLineOneDot()
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	CheckerVStep = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) / ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):	CheckerVRemainder = (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) % ((UINT16)checker_v_num);
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		while(line_num < ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+GPU_Cfg_Pattern.c (src):	blk_num_in256Pixel_of_each_line = ((ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH - 1) >> 8) + 1;
+GPU_Cfg_Pattern.c (src):	bmp_width_single_or_dual = (ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) ? (ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH<<1) : ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+GPU_Cfg_Pattern.c (src):	pattern_WriteLineOneDot(ddr_current_display_region_addr, (ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1), blk_num_in256Pixel_of_each_line);
+GPU_Cfg_Pattern.c (src):		for(j=1; j<(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH - 1); j++) {
+GPU_Cfg_Pattern.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->DUAL_MIPI_LCD != 0) { //dual mipi, then blk_num_in256Pixel_of_each_line is just half
+lcd_cfg_1080x1920_OppoR9_Oled.c (src\lcd):	TmpData = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH * 3; //PST(Packet Size Threshold), must be in multiple of 3 bytes, and less than 4096Bytes
+Main.c (src):UINT8 gMipiTableIndex;
+Main.c (src):		ShowMode = ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE; //显示的总画面个数
+Main.c (src):	if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Main.c (src):	LCD_ShowString(0,4,"LCM Name:",POINT_COLOR);LCD_ShowString(0,5,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bLCDName,GREEN);
+Main.c (src):	LCD_ShowString(0,8,"IC  Name:",POINT_COLOR);LCD_ShowString(10,8,(const char *)ptr_MIPI_TABLE[gMipiTableIndex]->bICName,GREEN);
+Main.c (src):	gMipiTableIndex = 0;
+Main.c (src):			if(ShowMode == ptr_MIPI_TABLE[gMipiTableIndex]->SIZE_OF_SHOW_MODE) //显示的总画面个数
+Power_task.c (src):	VSPN_SetVSNVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSP_mV);
+Power_task.c (src):	VSPN_SetVSPVoltage(ptr_MIPI_TABLE[gMipiTableIndex]->VSN_mV);	
+Power_task.c (src):  ptr_MIPI_TABLE[gMipiTableIndex]->ptr_Initial_LCM(); //写可以用或, 读得一个一个来	
+Pport_spi.c (src):		if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):				SPI_2828_WrReg(0xB1, ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HSA/VSA
+Pport_spi.c (src):			SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH); 	  //H V  //HBP/VBP   //
+Pport_spi.c (src):		}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		 SPI_2828_WrReg(0xB2, ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH); 	  //H V  //HBP/VBP   //07  0B 用此
+Pport_spi.c (src):	//SPI_2828_WrReg(0xB2, (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH), (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH)); 	  //H V  //HBP/VBP  //03用此
+Pport_spi.c (src):    SPI_2828_WrReg(0xB3, ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH, ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH);  	  //H V  //HFP/VFP
+Pport_spi.c (src):    SPI_2828_WrReg(0xB4, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH>>8))); //800	H
+Pport_spi.c (src):    SPI_2828_WrReg(0xB5, ((UINT8)ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH), ((UINT8)(ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH>>8))); //2560 V
+Pport_spi.c (src):		mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+Pport_spi.c (src):	if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode==0){
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH & 0x00FF);
+Pport_spi.c (src):		TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH & 0x00FF);
+Pport_spi.c (src):	}else if(ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode<=2&&ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode>0){
+Pport_spi.c (src):		TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HBP_WIDTH+ptr_MIPI_TABLE[gMipiTableIndex]->HSW_WIDTH;
+Pport_spi.c (src):		TmpDat |= (ptr_MIPI_TABLE[gMipiTableIndex]->VBP_WIDTH<<8)+(ptr_MIPI_TABLE[gMipiTableIndex]->VSW_WIDTH<<8);
+Pport_spi.c (src):	TmpDat = (ptr_MIPI_TABLE[gMipiTableIndex]->VFP_WIDTH << 8) | (ptr_MIPI_TABLE[gMipiTableIndex]->HFP_WIDTH & 0x00FF);
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->HACT_WIDTH;
+Pport_spi.c (src):	TmpDat = ptr_MIPI_TABLE[gMipiTableIndex]->VACT_WIDTH;
+Pport_spi.c (src):	mode = ptr_MIPI_TABLE[gMipiTableIndex]->Display_Mode;
+User_config.h (src):extern UINT8 gMipiTableIndex;
+---- Init_System Matches (17 in 3 files) ----
+BoardAndCoreInf.h (src):void Init_System(void);
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<P><STRONG><a name="[b2]"></a>Init_System</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, boardandcoreinf.o(i.Init_System))
+M32_Control.htm (outputs):<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = Init_System &rArr; Get_Sys_ID &rArr; Arm_Get_Current &rArr; lib_SPI1_Init &rArr; GPIO_Init
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+M32_Control.htm (outputs):<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_System
+Main.c (src):  	Init_System();

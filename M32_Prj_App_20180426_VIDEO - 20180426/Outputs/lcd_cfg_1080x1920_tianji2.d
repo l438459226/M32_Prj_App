@@ -1,0 +1,15 @@
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: Src\LCD\lcd_cfg_1080x1920_TianJi2.c
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\pport_spi.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\BasicDataType.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\user_gpio_def.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\StdPeriph_Driver\inc\stm32f10x_gpio.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\Include\stm32f10x.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cm3.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: D:\ARM\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmInstr.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\CMSIS\4.2.0\Include\core_cmFunc.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\STM32F1xx_Std_Driver\Include\system_stm32f10x.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\stm32f10x_conf.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\lcd_cfg.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\user_config.h
+.\Outputs\lcd_cfg_1080x1920_tianji2.o: .\Src\GPU_Cfg.h
