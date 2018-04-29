@@ -101,9 +101,6 @@ void KeyOTP_Process(void) { //后/下一个画面
 	if(PowerStatus==0) return;
 	LCD_ShowString(10,9,"OTP ",GREEN);
 	
-
-
-
 }
 
 void SysInitErrorProcess(void) {

@@ -278,7 +278,7 @@ void O_PWR_BL_PWM(uint8_t value) { //BL_PWM_GPB0
 
 //目前这两个PIN脚在BottomBoard上是悬空的
 //GPB1_LED0 --- MCU_PB1
-//GPC_LED1  --- MCU_PB2
+//GPC_LED1  --- MCU_PB20
 
 
 //XUODM 	--- MCU_PA11, 复用IO口:USBDM

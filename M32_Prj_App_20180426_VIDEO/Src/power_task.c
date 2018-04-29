@@ -30,7 +30,7 @@ void Power_Off() {
 	
 //	Lcd_Reset(0); //LCD reset À­µÍ
 	Delay_ms(20);
-Lcd_ShowMode(4);
+	Lcd_ShowMode(4);
 	Delay_ms(100);
 	//LCDsleepIn();
 		
